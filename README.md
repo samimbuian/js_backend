@@ -30,7 +30,7 @@ paste all code .gitignore file
 ## create environment variables file
 > .env
 ## create root folder
-> src > app.js / index.js / constance.js
+> src > app.js / index.js / constants.js
 ## modify package.json
 for import syntax
 >package.json
@@ -46,4 +46,30 @@ npm i -D nodemon
 "scripts": {
     "dev": "nodemon src/index.js"
   },
+```
+## create folders
+> src > controllers / db / middlewares / models / routes / utils
+## install prettier
+```
+npm i -D prettier
+```
+> .prettierrc
+```
+{
+    "singleQuote": false,
+    "bracketSpacing": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "semi": true
+}
+```
+> .prettierignore
+```
+./vscode
+/node_modules
+.dist
+*.env
+.env
+.env*
+
 ```
