@@ -28,6 +28,10 @@ git remote add origin https://github.com/samimbuian/js_backend.git
 
 paste all code .gitignore file
 ## create environment variables file
+install dotenv
+```
+npm install dotenv
+```
 > .env
 ## create root folder
 > src > app.js / index.js / constants.js
@@ -71,5 +75,28 @@ npm i -D prettier
 *.env
 .env
 .env*
-
 ```
+## database connection
+### first setup mongodb atlas
+> .env
+```
+PORT = 4000
+MONGODB_URI = mongodb+srv://samim:<password>@cluster0.zs6xuyn.mongodb.net
+```
+### database connection in 2 ways
+1. all code are index.js file
+  ```js
+  import mongoose form "mongoose"
+
+  function connectDB(){}
+
+  connectDB()
+  ```
+  Best Way
+  ```js
+  import mongoose form "mongoose"
+  //ife(imediently function excute)
+  //make sure ;()()
+  ( async ()=> {})()
+  ```
+2. separate all code in other files
