@@ -20,4 +20,10 @@ app.use(express.static("public"));
 // cookie parser for access user cookie and set cookie/    CRUD operation perform
 app.use(cookieParser());
 
+//routes import
+import userRouter from "./routes/user.route.js";
+
+//routes declaration
+app.use("/api/v1/users", userRouter); //url http://localhost:4000/api/v1/users/register
+
 export { app };
